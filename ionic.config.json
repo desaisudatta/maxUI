@@ -1,5 +1,7 @@
 {
   "name": "maxUI",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,10 @@
+{
+    "DASHBOARD":{
+        "title":"Home",
+        "test":"This is language test!"
+    },
+    "ALERT":{
+        "HEADER":"ERROR",
+        "MSG":"WRONG MESSAGE"
+    }
+}
