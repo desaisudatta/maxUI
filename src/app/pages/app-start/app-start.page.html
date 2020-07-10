@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>app-start</ion-title>
   </ion-toolbar>
@@ -7,4 +7,42 @@
 <ion-content>
   <ion-button color="primary" (click)="goToDashboard()">GoToDasboard</ion-button>
   <app-sample></app-sample>
+</ion-content> -->
+
+<ion-content padding>
+  <div class="container">
+    <div class="logo">
+      <img src="../../../assets/icon/logo.svg">
+    </div>
+    <div class="slider">
+      <ion-slides pager="true" [options]="slideOpts" id="mainSlider">
+        <ion-slide *ngFor="let img of slideImages">
+          <img [src]="img">
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="process">
+      <ion-slides pager="true" [options]="slideOpts" id="loginSlider">
+        <ion-slide>
+          <label class="process_header">{{'LOGIN.TITLE' | translate}}</label>
+          <form [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+            <div class="mobileNumberInput">
+              <div class="countryCode">IN +91</div>
+              <div class="mobileNumber">
+                <input type="number" placeholder="Your Mobile Number" formControlName="mobileNumber"
+                  [ngClass]="{'is-invalid':form.get('mobileNumber').touched && form.get('mobileNumber').invalid}"
+                  id="mobileNumber">
+                
+              </div>
+            </div>
+            <div  *ngIf="form.get('mobileNumber').touched && form.get('mobileNumber').invalid" class="invalid-feedback">
+              <div *ngIf="form.get('mobileNumber').errors.pattern" class="validationErr">Number must be a 10 charector</div>
+            </div>
+            <label class="process_msg">{{'LOGIN.OTP_MSG' | translate}}</label>
+            <button class="setndOptBtn" [disabled]="!form.valid">Send OTP</button>
+          </form>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
 </ion-content>

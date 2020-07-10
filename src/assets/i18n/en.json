@@ -6,5 +6,9 @@
     "ALERT":{
         "HEADER":"ERROR",
         "MSG":"WRONG MESSAGE"
+    },
+    "LOGIN":{
+        "TITLE":"Login to continue",
+        "OTP_MSG":"We will send you OTP on this number."
     }
 }

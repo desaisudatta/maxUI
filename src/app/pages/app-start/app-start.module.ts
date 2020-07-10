@@ -11,13 +11,18 @@ import { AppStartPage } from './app-start.page';
 //Component
 import { ComponentsModule } from "../../components/components.module";
 import { from } from 'rxjs';
+//Language set
+import { TranslateModule } from "@ngx-translate/core";
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     ComponentsModule,
+    TranslateModule,
     AppStartPageRoutingModule
   ],
   declarations: [AppStartPage]

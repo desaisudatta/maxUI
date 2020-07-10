@@ -1,7 +1,7 @@
 {
-  "name": "maxUI",
+  "name": "maxFit",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Avinash Jagtap",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
